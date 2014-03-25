@@ -7,6 +7,8 @@
  */
 namespace Mlaphp;
 
+use RuntimeException;
+
 /**
  * A lazy-connecting proxy class for `mysql_*()` functions.
  *
