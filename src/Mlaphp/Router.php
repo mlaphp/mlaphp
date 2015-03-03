@@ -58,6 +58,7 @@ class Router
     public function __construct($pages_dir = null)
     {
         if ($pages_dir) {
+            $pages_dir = str_replace(DIRECTORY_SEPARATOR, '/', $pages_dir);
             $this->pages_dir = rtrim($pages_dir, '/');
         }
     }
