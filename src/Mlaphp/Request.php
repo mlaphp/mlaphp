@@ -44,6 +44,13 @@ class Request
     public $get = array();
 
     /**
+     * A copy of $_POST.
+     *
+     * @var array
+     */
+    public $post = array();
+
+    /**
      * A copy of $_REQUEST.
      *
      * @var array
@@ -75,7 +82,7 @@ class Request
 
     /**
      * Constructor.
-     * 
+     *
      * @param array $globals A reference to $GLOBALS.
      */
     public function __construct(&$globals)
@@ -139,7 +146,7 @@ class Request
         if (isset($this->globals['_SESSION'])) {
             $this->session = &$this->globals['_SESSION'];
         }
-        
+
         return isset($this->session);
     }
 
