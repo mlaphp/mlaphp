@@ -44,6 +44,13 @@ class Request
     public $get = array();
 
     /**
+     * A copy of $_POST.
+     *
+     * @var array
+     */
+    public $post = array();
+
+    /**
      * A copy of $_REQUEST.
      *
      * @var array
