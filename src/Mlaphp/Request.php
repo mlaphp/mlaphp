@@ -2,7 +2,7 @@
 /**
  * This file is part of "Modernizing Legacy Applications in PHP".
  *
- * @copyright 2014 Paul M. Jones <pmjones88@gmail.com>
+ * @copyright 2014-2016 Paul M. Jones <pmjones88@gmail.com>
  * @license http://opensource.org/licenses/bsd-license.php BSD
  */
 namespace Mlaphp;
@@ -75,13 +75,25 @@ class Request
 
     /**
      * Constructor.
-     * 
+     *
      * @param array $globals A reference to $GLOBALS.
      */
     public function __construct(&$globals)
     {
+        // mention the superglobals by name to invoke auto_globals_jit, thereby
+        // forcing them to be populated; cf. <http://php.net/auto-globals-jit>.
+        $_COOKIE;
+        $_ENV;
+        $_FILES;
+        $_GET;
+        $_POST;
+        $_REQUEST;
+        $_SERVER;
+
+        // retain a reference to the $globals param, not to $GLOBALS directly
         $this->globals = &$globals;
 
+        // copy superglobals into properties
         $properties = array(
             'cookie' => '_COOKIE',
             'env' => '_ENV',
@@ -139,7 +151,7 @@ class Request
         if (isset($this->globals['_SESSION'])) {
             $this->session = &$this->globals['_SESSION'];
         }
-        
+
         return isset($this->session);
     }
 
