@@ -2,4 +2,6 @@ Added new method Response::addVars(), to merge new template variables with the e
 
 You now run `phpunit` at the package root, rather than from the `tests/` subdirectory.
 
+Merged #2 to fix #1.
+
 Updated docblocks and added administrative files.
