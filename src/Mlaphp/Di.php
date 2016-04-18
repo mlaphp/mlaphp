@@ -111,6 +111,7 @@ class Di
     /**
      * Is a named callable defined?
      *
+     * @param string $name The object name.
      * @return bool
      */
     public function has($name)
