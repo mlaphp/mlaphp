@@ -30,11 +30,12 @@ class ResponseTest extends \PHPUnit_Framework_TestCase
         $this->assertSame($this->view, $this->response->getView());
     }
 
-    public function testSetAndGetVars()
+    public function testSetAddGetVars()
     {
-        $vars = array('foo' => 'bar');
-        $this->response->setVars($vars);
-        $this->assertSame($vars, $this->response->getVars());
+        $this->response->setVars(array('foo' => 'bar'));
+        $this->response->addVars(array('foo' => 'zim', 'dib' => 'gir'));
+        $expect = array('foo' => 'zim', 'dib' => 'gir');
+        $this->assertSame($expect, $this->response->getVars());
     }
 
     public function testSetAndGetLastCall()

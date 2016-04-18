@@ -129,6 +129,18 @@ class Response
     }
 
     /**
+     * Adds to the variables to be extracted into the view scope.
+     *
+     * @param array $vars The variables to be extracted into the view scope.
+     * @return null
+     */
+    public function addVars(array $vars)
+    {
+        unset($vars['this']);
+        $this->vars = array_merge($this->vars, $vars);
+    }
+
+    /**
      * Gets the variables to be extracted into the view scope.
      *
      * @return array
@@ -174,7 +186,7 @@ class Response
     {
         return htmlspecialchars($string, ENT_QUOTES, 'UTF-8');
     }
-    
+
     /**
      * Buffers a call to `header()`.
      *
