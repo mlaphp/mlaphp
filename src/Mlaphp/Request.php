@@ -12,6 +12,8 @@ use InvalidArgumentException;
 
 /**
  * A data structure object to encapsulate superglobal references.
+ *
+ * @package mlaphp/mlaphp
  */
 class Request
 {

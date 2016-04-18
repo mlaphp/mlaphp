@@ -2,7 +2,7 @@
 /**
  * This file is part of "Modernizing Legacy Applications in PHP".
  *
- * @copyright 2014 Paul M. Jones <pmjones88@gmail.com>
+ * @copyright 2014-2016 Paul M. Jones <pmjones88@gmail.com>
  * @license http://opensource.org/licenses/bsd-license.php BSD
  */
 namespace Mlaphp;
@@ -11,6 +11,8 @@ use UnexpectedValueException;
 
 /**
  * A dependency injection container.
+ *
+ * @package mlaphp/mlaphp
  */
 class Di
 {

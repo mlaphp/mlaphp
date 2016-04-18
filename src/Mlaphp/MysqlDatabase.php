@@ -2,7 +2,7 @@
 /**
  * This file is part of "Modernizing Legacy Applications in PHP".
  *
- * @copyright 2014 Paul M. Jones <pmjones88@gmail.com>
+ * @copyright 2014-2016 Paul M. Jones <pmjones88@gmail.com>
  * @license http://opensource.org/licenses/bsd-license.php BSD
  */
 namespace Mlaphp;
@@ -26,6 +26,7 @@ use RuntimeException;
  *     ?>
  *
  * @see http://php.net/manual/en/ref.mysql.php
+ * @package mlaphp/mlaphp
  */
 class MysqlDatabase
 {
@@ -93,7 +94,7 @@ class MysqlDatabase
 
     /**
      * Constructor.
-     * 
+     *
      * @param string $server The server to connect to.
      * @param string $username Connect with this username.
      * @param string $password Connect with this password.
