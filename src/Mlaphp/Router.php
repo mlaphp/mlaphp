@@ -228,6 +228,7 @@ class Router
      */
     protected function pageExists($file)
     {
+        $file = str_replace(DIRECTORY_SEPARATOR, '/', $file);
         return $file != ''
             && substr($file, 0, strlen($this->pages_dir)) == $this->pages_dir
             && file_exists($file)
