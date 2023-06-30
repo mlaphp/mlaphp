@@ -2,7 +2,10 @@
 /**
  * This file is part of "Modernizing Legacy Applications in PHP".
  *
- * @copyright 2014-2016 Paul M. Jones <pmjones88@gmail.com>
+ * If you are using PHP 8.1 or later, this class may not work for you.
+ * Consider using Request81 as a drop-in replacement.
+ *
+ * @copyright 2014-2023 Paul M. Jones <pmjones88@gmail.com>
  * @license http://opensource.org/licenses/bsd-license.php BSD
  */
 namespace Mlaphp;
