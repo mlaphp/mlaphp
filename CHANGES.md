@@ -1,7 +1,1 @@
-Added new method Response::addVars(), to merge new template variables with the existing variables.
-
-You now run `phpunit` at the package root, rather than from the `tests/` subdirectory.
-
-Merged #2 to fix #1.
-
-Updated docblocks and added administrative files.
+Added class Request81 as a drop-in replacement for Request to allow for PHP 8.1 $GLOBALS references. Fixes #7.
